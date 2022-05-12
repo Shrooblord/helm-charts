@@ -297,7 +297,7 @@ spec:
           configMap:
             name: {{ template "datadog.fullname" . }}-cluster-agent-confd
             items:
-{{- range $file, $configs := ($.Values.clusterAgent.confd | b64dec | toYaml ) }}
+{{- range $file, $configs := ( toYaml ($.Values.clusterAgent.confd | b64dec) ) }}
             - key: {{ $file | quote }}
               path: {{ $file | quote }}
 {{- end }}
