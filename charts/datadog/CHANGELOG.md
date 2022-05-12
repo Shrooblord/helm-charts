@@ -1,5 +1,8 @@
 # Datadog changelog
 
+## 2.33.5
+* Add the ability to use a `confd` existing secret for the Cluster Agent.
+
 ## 2.33.4
 
 * Improves help message when only `.datadog.containerInclude` is defined but no `.datadog.containerExclude`
